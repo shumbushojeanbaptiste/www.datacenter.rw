@@ -16,10 +16,10 @@
       <small>DATA CENTER</small>
     </h6>
 
-    <?php if ($role == '2') { ?>
+  
 
     <ul class="navbar-nav flex-fill w-100">
-
+  
       <!-- Dashboard -->
       <li class="nav-item">
         <a class="nav-link" href="home">
@@ -31,7 +31,7 @@
       
 
     
-
+<?php if ($role == '1') { ?>
       <!-- Reports -->
       <li class="nav-item dropdown">
         <a href="#reports" data-toggle="collapse" class="dropdown-toggle nav-link">
@@ -44,7 +44,7 @@
           <li class="nav-item"><a class="nav-link" href="predictions">Hourly Predictions</a></li>
         </ul>
       </li>
-
+   <?php } ?>
       <!-- Logout -->
       <li class="nav-item">
         <a class="nav-link text-danger" href="../logout">
@@ -54,7 +54,7 @@
       </li>
 
     </ul>
-    <?php } ?>
+ 
 
   </nav>
 </aside>

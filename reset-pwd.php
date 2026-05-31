@@ -82,7 +82,7 @@ document.getElementById("otpForm").addEventListener("submit", function(e) {
 
         // ✅ Redirect based on role and side_value
         if(role === 1){
-            location.href = 'superadmin/index';
+            location.href = 'datacenter/index';
         }
         else if(role === 2 && side_value === 1){
             location.href = 'landlord/index';
