@@ -1,0 +1,77 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                        CHIC Ltd - SYSTEM DOCUMENTATION                      ║
+║                          API Integration Guide                              ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 1. PROJECT INFORMATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Company Name:        CHIC Ltd
+  Project Purpose:     System Integration
+  Deployment Status:   ✓ Active
+  Version:             1.0
+  Last Updated:        January 29, 2026
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 2. API CONFIGURATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Base URL:
+  ┌────────────────────────────────────────────────────────────────────────┐
+  │ https://pay.xode.rw/bank/                                             │
+  └────────────────────────────────────────────────────────────────────────┘
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 3. AUTHENTICATION CREDENTIALS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ⚠️  SECURITY WARNING: Keep these credentials secure!
+      Never commit to public repositories or share without authorization.
+
+  API_KEY:
+  ┌────────────────────────────────────────────────────────────────────────┐
+  │ IGZad2FGv23SDsQrRVOVhgvUyM4XYz9atgmzc6C9WFnSFDBs                       │
+  └────────────────────────────────────────────────────────────────────────┘
+
+  Branch_KEY:
+  ┌────────────────────────────────────────────────────────────────────────┐
+  │ sQuVFxX5P8wIbTXweXnq64CMR6Aaqwnr                                       │
+  └────────────────────────────────────────────────────────────────────────┘
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 4. IMPLEMENTATION NOTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  • Store API_KEY and Branch_KEY in environment variables
+  • Always use HTTPS connections to the API endpoint
+  • Include both credentials in request headers for authentication
+  • Implement error handling for failed API requests
+  • Log all transactions for audit purposes
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 5. SUPPORT & CONTACT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  For technical issues, questions, or support:
+
+  📧 Email:  developer@itec.rw
+  📱 Phone:  0788644687
+
+  Response Time: During business hours
+  Contact for: Bug reports, API issues, credential rotation
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 6. VERSION HISTORY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  v1.0 | 29 Jan 2026 | Initial deployment - System integration live
+                       API credentials configured
+                       Base URL established
+
+╚════════════════════════════════════════════════════════════════════════════╝

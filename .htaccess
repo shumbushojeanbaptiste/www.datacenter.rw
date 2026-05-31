@@ -1,0 +1,21 @@
+# Enable mod_rewrite
+RewriteEngine On
+
+# -------------------------------
+# Remove .html Extension
+# -------------------------------
+# If requested file with .html exists, serve it
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# -------------------------------
+# Remove .php Extension
+# -------------------------------
+# If requested file with .php exists, serve it
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# -------------------------------
+# Disable directory listing
+# -------------------------------
+Options -Indexes
