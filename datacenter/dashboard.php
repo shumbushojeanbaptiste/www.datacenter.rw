@@ -238,9 +238,12 @@ function mylang12(data12){
 
     $(document).ready(function () {
        liveData();
+
+       
 		var year_id = $('#year_id').val();
         var company = <?php echo $company ?>;
 		var montly =  $("#month_Id").val();
+        barRiskAssessment(year_id); 
 		 
 		 pieData(year_id,montly,company);
 		//barPayment(year_id);
