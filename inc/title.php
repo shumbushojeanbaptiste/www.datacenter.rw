@@ -1,1 +1,1 @@
-Itec xode | CHIC
+Data center | Monitoring
