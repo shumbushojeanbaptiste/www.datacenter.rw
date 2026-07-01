@@ -18,8 +18,6 @@
           </span>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="<?php if($role == '2') {echo '?file=profile';} else {echo '#';}?>"><i class="fe fe-user fe-16"></i> Profile</a>
-         
           <a class="dropdown-item" href="../logout"><i class="fe fe-power fe-16"> </i> Logout</a>
         </div>
       </li>

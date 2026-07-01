@@ -194,7 +194,7 @@ $(document).ready(function () {
           $("#indicator").html("Try again");
         }
 
-        $("#loginbutton, #password, #email").prop("disabled", false);
+      $("#loginbutton, #password, #email").prop("disabled", false);
       },
 
       error: function () {

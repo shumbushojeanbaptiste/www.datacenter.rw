@@ -5,6 +5,84 @@ $token = htmlspecialchars($_POST['token'] ?? '');
 $phone = htmlspecialchars($_POST['phone'] ?? '');
 $role = htmlspecialchars($_POST['role'] ?? '');
 $side_value = htmlspecialchars($_POST['side_value'] ?? '');
+
+?>
+<?php
+
+
+class future_sms
+{
+    private static $api_id  = '';
+    private static $api_key = '';
+    private static $base_url = "https://sms-api.futureinnovatech.rw/v1/api";
+
+    /* Set API credentials */
+    public static function init($api_id, $api_key)
+    {
+        self::$api_id  = $api_id;
+        self::$api_key = $api_key;
+    }
+
+    /* Send SMS */
+    public static function send($sender_id, $tel, $message, $link = '')
+    {
+        return self::request(array(
+            'ref'       => 'sms',
+            'sender_id' => $sender_id,
+            'tel'       => $tel,
+            'message'   => $message,
+            'link'      => $link
+        ));
+    }
+
+
+    /* CURL Request Handler */
+    private static function request($data)
+    {
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => self::$base_url . '/' . self::$api_id . '/' . self::$api_key,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => $data,
+        ));
+
+        $response = curl_exec($curl);
+
+        if ($response === false) {
+            $error = curl_error($curl);
+            curl_close($curl);
+            return array('status' => false, 'error' => $error);
+        }
+
+        curl_close($curl);
+        return json_decode($response, true);
+    }
+}
+
+/* ===========================
+   USAGE EXAMPLES
+   =========================== */
+
+// 1️Initialize API credentials
+future_sms::init(
+    'FI-4829f172-174b-4f62-8ed0-07fda1f7cd7c-ID',
+    'FI-53334695-6bf6-42a3-a4f1-6adc3eeea28a-KEY'
+);
+$sms = "Your OTP code is $token. Use it within 5 minutes to access the system. Do not share this code.";
+
+//2️ Send SMS
+$sms = future_sms::send(
+    'N-SMS',
+    $phone,
+    $sms
+);
+
+// echo "SMS RESPONSE:\n";
+// print_r($sms);
+
 ?>
 
 <main class="d-flex w-100 h-100">
@@ -23,10 +101,10 @@ $side_value = htmlspecialchars($_POST['side_value'] ?? '');
                             <div class="m-sm-3">
                                 <form id="otpForm">
                                     <div class="mb-3 text-center">
-                                        <label class="form-label">Your OTP:</label>
+                                        <!-- <label class="form-label">Your OTP:</label>
                                         <div class="otp-display" style="font-family: 'Courier New', monospace; font-size: 2rem; letter-spacing: 0.5rem; color: #007bff;">
                                             <?= $token ?>
-                                        </div>
+                                        </div> -->
                                     </div>
 
                                     <div class="mb-3">
